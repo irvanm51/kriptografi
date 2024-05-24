@@ -1,23 +1,5 @@
 const n = 26;
 
-function isPrime(num) {
-    if (num <= 1) {
-        return false; // 0 and 1 bukan bilangan prima
-    }
-    if (num <= 3) {
-        return true; // 2 and 3 bukan bilangan prima
-    }
-    if (num % 2 === 0 || num % 3 === 0) {
-        return false; // perkalian dari 2 and 3 bukan bilangan prima
-    }
-    for (let i = 5; i * i <= num; i += 6) {
-        if (num % i === 0 || num % (i + 2) === 0) {
-            return false;
-        }
-    }
-    return true;
-}
-
 function encryptText() {
     // Ambil pesan yang akan diencrypt
     const plaintext = document.getElementById('plaintext').value;
@@ -27,13 +9,6 @@ function encryptText() {
 
     // Kunci B (Jumlah pergeseran)
     const b = parseInt(document.getElementById('b-encrypt').value);
-    
-    // Cek m adalah bilangan prima 
-    if (!isPrime(m)){
-        // pesan error jika m bukan bilangan prima
-        alert("Masukkan bilangan prima untuk Slope / A");
-        return;
-    }
 
     // Cek jika kunci m atau b bukan angka
     if (isNaN(m) || isNaN(b)) {
@@ -55,7 +30,7 @@ function encryptText() {
 }
 
 function getIndexFromChar(letter) {
-    // Fungsi untuk mengambil index dengan mengurangi -97 (Kode ASCI)
+    // Fungsi untuk mengambil index dengan mengurangi -97 (Kode ASCII)
     // 'a' -> 0, 'b' -> 1, 'c' -> 2,  ..., 'z' -> 25
     return letter.toLowerCase().charCodeAt(0) - 97; 
 }
@@ -116,13 +91,6 @@ function decryptText() {
     // Kunci B (Jumlah pergeseran)
     const b = parseInt(document.getElementById('b-decrypt').value);
 
-    // Cek m adalah bilangan prima 
-    if (!isPrime(m)){
-        // pesan error jika m bukan bilangan prima
-        alert("Masukkan bilangan prima untuk Slope / A");
-        return;
-    }
-
     // Cek jika kunci m atau b bukan angka
     if (isNaN(m) || isNaN(b)) {
         // pesan error jika m atau b bukan angka
@@ -180,7 +148,7 @@ function decrypt(text, mDecrypt, bDecrypt) {
         } else {
 
             // Data tidak akan didecrypt 
-            decryptedText += letter; // Leave non-alphabetic characters unchanged
+            decryptedText += letter;
         }
     }
 
@@ -196,10 +164,10 @@ function cryptoAnalysis() {
     let result = [];
 
     // Bilangan prima yang valid relatif dengan n
-    const validAValues = [1, 3, 5, 7, 9, 11, 15, 17, 19, 21, 23, 25];
+    const bilPrimaValid = [1, 2, 3, 5, 7, 9, 11, 15, 17, 19, 21, 23, 25];
 
     // looping semua bilangan prima yang memungkinakan digunakan
-    for (let m of validAValues) {
+    for (let m of bilPrimaValid) {
         
         // Looping semua bilangan yang lebih kecil dari n
         for (let b = 0; b < n; b++) {
