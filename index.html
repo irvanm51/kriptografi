@@ -8,89 +8,15 @@
         <script src="script.js"></script>
     </head>
     <body>
-        <h1 style="text-align: center">Affine Cipher</h1>
+        <h1 style="text-align: center">Enkripsi</h1>
         
-        <div style="width: 100%; display: flex; justify-content: center; align-items: center">
-            <div style="width: 100%; border: 1px solid black; padding: 5px; height: 500px">
-                <h3 style="text-align: center">Enkripsi</h3>
-
-                <div>
-                    <div style="width: 50%; display: inline-block">Plaintext</div>
-                    <input type="text" id="plaintext">
-                </div>
-
-                <div>
-                    <div style="width: 50%; display: inline-block">Slope / A</div>
-                    <input type="number" id="m-encrypt">
-                </div>
-
-                <div>
-                    <div style="width: 50%; display: inline-block">Intercept / B</div>
-                    <input type="number" id="b-encrypt">
-                </div>
-                
-                <div style="text-align: center; margin-top: 10px;">
-                    <button onclick="encryptText()">Encrypt</button>
-                </div>
-
-                <h2>Result</h2>
-                <div id="result-encrypt"></div>
-            </div>
-            
-            
-            <div style="width: 100%; border: 1px solid black; padding: 5px; height: 500px">
-                <h3 style="text-align: center">Dekripsi</h3>
-
-                <div>
-                    <div style="width: 50%; display: inline-block">Ciphertext</div>
-                    <input type="text" id="ciphertext-decrypt">
-                </div>
-
-                <div>
-                    <div style="width: 50%; display: inline-block">Slope / A</div>
-                    <input type="number" id="m-decrypt">
-                </div>
-
-                <div>
-                    <div style="width: 50%; display: inline-block">Intercept / B</div>
-                    <input type="number" id="b-decrypt">
-                </div>
-
-                <div style="text-align: center; margin-top: 10px;">
-                    <button onclick="decryptText()">Decrypt</button>
-                </div>
-
-                <h2>Result</h2>
-                <div id="result-decrypt"></div>
-            </div>
-            <div style="width: 100%; border: 1px solid black; padding: 5px; height: 500px">
-                <h3 style="text-align: center">Kriptoanalisis</h3>
-
-                <div>
-                    <div style="width: 50%; display: inline-block">Ciphertext</div>
-                    <input type="text" id="ciphertext-criptoanalis">
-                </div>
-
-                <div style="text-align: center; margin-top: 10px;">
-                    <button onclick="cryptoAnalysis()">Crypto Analysis</button>
-                </div>
-
-                <h2>Result</h2>
-                <div class="table-container">
-                    <table id="resultTable">
-                        <thead>
-                        <tr>
-                            <th>Kunci M</th>
-                            <th>Kunci B</th>
-                            <th>Pesan</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        </tbody>
-                    </table>
-                </div>
-                
-            </div>
+        <div style="width: 100%; height: 300px ;display: flex; justify-content: center; align-items: center; background-color: cadetblue">
+            <a href="symetric.html">
+                <button style="width: 200px; height: 80px; font-size: 24px; background-color: black; color: white">SYMETRIC</button>
+            </a>
+            <a href="asymetric.html">
+                <button style="width: 200px; height: 80px; font-size: 24px; background-color: black; color: white">ASYMETRIC</button>
+            </a>
         </div>
     </body>
 </html>

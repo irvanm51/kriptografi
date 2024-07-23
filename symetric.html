@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Symmetric Encryption (AES)</title>
+    <script src="script.js"></script>
+</head>
+<body>
+<h1>Symmetric Encryption (AES)</h1>
+<textarea id="plainText" placeholder="Enter plain text"></textarea>
+<input type="hidden" id="aesIv">
+<button onclick="encryptAES()">Encrypt</button>
+<textarea id="cipherText" placeholder="Cipher text will appear here"></textarea>
+<button onclick="decryptAES()">Decrypt</button>
+<textarea id="decryptedText" placeholder="Decrypted text will appear here"></textarea>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+</body>
+</html>
