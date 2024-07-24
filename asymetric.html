@@ -3,19 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asymmetric Encryption (RSA)</title>
+    <title>Asymetric</title>
     <script src="script.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsrsasign/10.5.20/jsrsasign-all-min.js"></script>
+    <style>
+        .long-string {
+            word-wrap: break-word;
+            white-space: pre-wrap;
+            background-color: #f9f9f9;
+            padding: 10px;
+            border: 1px solid #ddd;
+            font-family: monospace;
+        }
+    </style>
 </head>
 <body>
+<h1 style="text-align: center">Asymetric Encryption (RSA)</h1>
 
-    <h1>Asymmetric Encryption (RSA)</h1>
-    <textarea id="plainTextRSA" placeholder="Enter plain text"></textarea>
-    <button onclick="encryptRSA()">Encrypt</button>
-    <textarea id="cipherTextRSA" placeholder="Cipher text will appear here"></textarea>
-    <button onclick="decryptRSA()">Decrypt</button>
-    <textarea id="decryptedTextRSA" placeholder="Decrypted text will appear here"></textarea>
+<div style="display: flex; justify-content: center; align-content: center">
+    <div style="display: flex; justify-content: center; align-content: center">
+        <div style="margin-right: 80px; border: 1px solid black; padding: 30px; width: 400px">
+            <h3 style="text-align: center">Encrypt</h3>
+
+            <input type="hidden" id="aesIv">
+            <input id="plainText-rsa" style="width: 400px;" placeholder="Enter plain text">
+            <br>
+            <br>
+            <button style="width: 400px;" onclick="encryptRSA()">Encrypt</button>
+
+            <p>Result : </p>
+            <div id="result-encrypt-rsa" class="long-string"></div>
+        </div>
+        <div style="margin-right: 80px; border: 1px solid black; padding: 30px; width: 400px" >
+            <h3 style="text-align: center">Decrypt</h3>
+
+            <input id="cipherText-rsa" style="width: 400px;" placeholder="Enter plain text">
+            <br>
+            <br>
+            <button style="width: 400px;" onclick="decryptRSA()">Decrypt</button>
+
+            <p>Result : </p>
+            <div id="result-decrypt-rsa" class="long-string"></div>
+        </div>
+    </div>
 
 
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
 </body>
 </html>
+

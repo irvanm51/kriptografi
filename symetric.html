@@ -3,17 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Symmetric Encryption (AES)</title>
+    <title>Symetric</title>
     <script src="script.js"></script>
+    <style>
+        .long-string {
+            word-wrap: break-word;
+            white-space: pre-wrap;
+            background-color: #f9f9f9;
+            padding: 10px;
+            border: 1px solid #ddd;
+            font-family: monospace;
+        }
+    </style>
 </head>
 <body>
-<h1>Symmetric Encryption (AES)</h1>
-<textarea id="plainText" placeholder="Enter plain text"></textarea>
-<input type="hidden" id="aesIv">
-<button onclick="encryptAES()">Encrypt</button>
-<textarea id="cipherText" placeholder="Cipher text will appear here"></textarea>
-<button onclick="decryptAES()">Decrypt</button>
-<textarea id="decryptedText" placeholder="Decrypted text will appear here"></textarea>
+<h1 style="text-align: center">Symetric Encryption (AES)</h1>
+
+<div style="display: flex; justify-content: center; align-content: center">
+    <div style="margin-right: 80px; border: 1px solid black; padding: 30px; width: 400px">
+        <h3 style="text-align: center">Encrypt</h3>
+
+        <input type="hidden" id="aesIv">
+        <input id="plainText-aes" style="width: 400px;" placeholder="Enter plain text">
+        <br>
+        <br>
+        <button style="width: 400px;" onclick="encryptAES()">Encrypt</button>
+
+        <p>Result : </p>
+        <div id="result-encrypt-aes" class="long-string"></div>
+    </div>
+    <div style="margin-right: 80px; border: 1px solid black; padding: 30px; width: 400px" >
+        <h3 style="text-align: center">Decrypt</h3>
+
+        <input id="cipherText-aes" style="width: 400px;" placeholder="Enter plain text">
+        <br>
+        <br>
+        <button style="width: 400px;" onclick="decryptAES()">Decrypt</button>
+
+        <p>Result : </p>
+        <div id="result-decrypt-aes" class="long-string"></div>
+
+    </div>
+</div>
+
+<div style="margin-left: 200px; margin-top: 50px;">
+    <a href="./index.html">
+        <button>KEMBALI</button>
+    </a>
+</div>
+
+
+
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
 </body>
