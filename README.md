@@ -1,8 +1,9 @@
 # kriptografi
-Simple project to encrypt, decrypt and cryptanalyst using affine cypher with html, css, javascript
+Simple project to encrypt, decrypt Symetric (AES) and Asymetric (RSA)
 
+Using HTML, CSS, Javascript, NODE JS
 
 
 # LINK DEMO
 
-https://drive.google.com/file/d/1QoPwqwtBzQiHDem7eukXVWwQ1-hF48g7/view?usp=sharing
+https://drive.google.com/file/d/1cP08Ph509oWRWSipEWy2fQ9toqDqpTEF/view?usp=sharing
