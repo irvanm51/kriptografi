@@ -1,0 +1,18 @@
+{
+  "name": "kriptografi",
+  "version": "1.0.0",
+  "description": "Simple project to encrypt, decrypt and cryptanalyst using affine cypher with html, css, javascript",
+  "main": "generate.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "express": "^4.19.2",
+    "fs": "^0.0.1-security"
+  }
+}
